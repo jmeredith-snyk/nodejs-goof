@@ -258,7 +258,7 @@ exports.import = function (req, res, next) {
     data = "No backup.txt file found";
     fs.readFile('backup.txt', 'ascii', function (err, data) {
       if (!err) {
-        data = data;
+        data = String(data);
       }
     });
   } else {
